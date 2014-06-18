@@ -5,7 +5,7 @@ module Tale
     end
 
     def sons
-      ['the first', 'the second', 'the third']
+      ['the eldest', 'the second', 'the youngest']
     end
   end
 end

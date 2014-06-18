@@ -6,6 +6,6 @@ describe Tale::Miller do
   end
 
   it 'has got three sons' do
-    expect(subject.sons).to eq(['the first', 'the second', 'the third'])
+    expect(subject.sons).to eq(['the eldest', 'the second', 'the youngest'])
   end
 end
