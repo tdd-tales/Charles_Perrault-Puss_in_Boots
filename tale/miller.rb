@@ -5,7 +5,9 @@ module Tale
     end
 
     def sons
-      ['the eldest', 'the second', 'the youngest']
+      @sons ||= [ Son.new('the eldest'),
+                  Son.new('the second'),
+                  Son.new('the youngest') ]
     end
   end
 end

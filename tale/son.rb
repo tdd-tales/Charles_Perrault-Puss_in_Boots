@@ -1,6 +1,10 @@
 module Tale
   class Son
-    attr_reader :inheritance
+    def initialize(name)
+      @name = name
+    end
+
+    attr_reader :name, :inheritance
 
     def take(inheritance)
       @inheritance = inheritance

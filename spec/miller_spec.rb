@@ -1,4 +1,5 @@
 require_relative '../tale/miller'
+require_relative '../tale/son'
 
 describe Tale::Miller do
   it 'has own inheritance' do
@@ -6,6 +7,7 @@ describe Tale::Miller do
   end
 
   it 'has got three sons' do
-    expect(subject.sons).to eq(['the eldest', 'the second', 'the youngest'])
+    sons_names = ['the eldest', 'the second', 'the youngest']
+    expect(subject.sons.map(&:name)).to eq(sons_names)
   end
 end
