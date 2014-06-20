@@ -1,13 +1,15 @@
 module Tale
   class Miller
-    def inheritance
-      ['mill', 'donkey', 'cat']
+    def initialize
+      @sons = [ Son.new('the eldest'),
+                Son.new('the second'),
+                Son.new('the youngest') ]
     end
 
-    def sons
-      @sons ||= [ Son.new('the eldest'),
-                  Son.new('the second'),
-                  Son.new('the youngest') ]
+    attr_reader :sons
+
+    def inheritance
+      ['mill', 'donkey', 'cat']
     end
   end
 end
