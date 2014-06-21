@@ -2,7 +2,8 @@ Charles Perrault – Puss in Boots
 ==============================
 
 http://en.wikipedia.org/wiki/Puss_in_Boots   
-http://www.pitt.edu/~dash/perrault04.html
+http://www.pitt.edu/~dash/perrault04.html    
+[![Build Status](https://travis-ci.org/tdd-tales/Charles_Perrault-Puss_in_Boots.svg?branch=master)](https://travis-ci.org/tdd-tales/Charles_Perrault-Puss_in_Boots)
 
 License
 ==============================
