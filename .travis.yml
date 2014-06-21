@@ -4,3 +4,7 @@ rvm:
 
 notifications:
   email: false
+
+addons:
+  code_climate:
+    repo_token: 9edcdea69a0daffab607a9eca86782c925c08f2a152d76c2abe6bbac4251a680 

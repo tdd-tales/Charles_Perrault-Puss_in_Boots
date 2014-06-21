@@ -1,4 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rspec'
-gem 'rake', group: :test
+
+group :test do
+  gem 'rake'
+  gem 'codeclimate-test-reporter', require: nil
+end
