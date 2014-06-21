@@ -3,7 +3,7 @@ require_relative '../tale/son'
 
 describe Tale::Miller do
   it 'has own inheritance' do
-    expect(subject.inheritance).to eq(['mill', 'donkey', 'cat'])
+    expect(subject.inheritance).to eq([['mill', 2], ['donkey', 1], ['cat', 0]])
   end
 
   it 'has got three sons' do

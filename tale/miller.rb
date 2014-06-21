@@ -9,7 +9,7 @@ module Tale
     attr_reader :sons
 
     def inheritance
-      ['mill', 'donkey', 'cat']
+      [['mill', 2], ['donkey', 1], ['cat', 0]]
     end
   end
 end
