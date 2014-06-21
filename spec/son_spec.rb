@@ -11,8 +11,11 @@ describe Tale::Son do
     expect(subject.inheritance).to be_nil
   end
 
-  it 'takes an inheritance' do
-    subject.take('treasure')
+  it 'takes the most valuable from an inheritance' do
+    inheritance = [['table', 0], ['chair', 0], ['treasure', 1]]
+    subject.take_the_most_valuable_from_inheritance(inheritance)
+
     expect(subject.inheritance).to eq('treasure')
+    expect(inheritance).to eq([['table', 0], ['chair', 0]])
   end
 end

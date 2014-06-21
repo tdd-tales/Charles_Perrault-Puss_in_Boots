@@ -1,7 +1,7 @@
 module Tale
   class DivideInheritance
     def run(inheritance, sons)
-      sons.each_with_index { |son, i| son.take(inheritance[i]) }
+      sons.each { |son| son.take_the_most_valuable_from_inheritance(inheritance) }
     end
   end
 end

@@ -12,5 +12,6 @@ describe Tale::DivideInheritance do
     expect(the_eldest.inheritance).to eq('mill')
     expect(the_second.inheritance).to eq('donkey')
     expect(the_youngest.inheritance).to eq('cat')
+    expect(miller.inheritance).to be_empty
   end
 end
