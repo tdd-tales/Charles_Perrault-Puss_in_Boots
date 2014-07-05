@@ -8,9 +8,9 @@ describe Tale::DivideInheritance do
 
     subject.run(miller.inheritance, miller.sons)
 
-    expect(the_eldest.inheritance).to eq('mill')
-    expect(the_second.inheritance).to eq('donkey')
-    expect(the_youngest.inheritance).to eq('cat')
+    expect(the_eldest.inheritance).to eq(['mill', 2])
+    expect(the_second.inheritance).to eq(['donkey', 1])
+    expect(the_youngest.inheritance).to eq(['cat', 0])
     expect(miller.inheritance).to be_empty
   end
 end
