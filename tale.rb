@@ -1,5 +1,4 @@
 require_relative 'tale/miller'
-require_relative 'tale/son'
 require_relative 'tale/divide_inheritance'
 
 module Tale

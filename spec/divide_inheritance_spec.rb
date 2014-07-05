@@ -1,6 +1,5 @@
 require_relative '../tale/divide_inheritance'
 require_relative '../tale/miller'
-require_relative '../tale/son'
 
 describe Tale::DivideInheritance do
   it 'runs the division' do

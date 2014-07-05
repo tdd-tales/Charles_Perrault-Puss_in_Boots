@@ -1,3 +1,5 @@
+require_relative 'son'
+
 module Tale
   class Miller
     def initialize

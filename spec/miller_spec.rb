@@ -1,5 +1,4 @@
 require_relative '../tale/miller'
-require_relative '../tale/son'
 
 describe Tale::Miller do
   it 'has own inheritance' do
