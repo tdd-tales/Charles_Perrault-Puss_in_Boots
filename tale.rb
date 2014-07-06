@@ -7,5 +7,8 @@ module Tale
 
     divide_inheritance = DivideInheritance.new
     divide_inheritance.run(miller.inheritance, miller.sons)
+
+    the_poor_young_fellow = miller.sons.last
+    the_poor_young_fellow.comfortless?
   end
 end

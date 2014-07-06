@@ -11,5 +11,9 @@ module Tale
       the_most_valuable = inheritance.max_by(&:last)
       @inheritance = inheritance.delete(the_most_valuable)
     end
+
+    def comfortless?
+      inheritance.last == 0
+    end
   end
 end

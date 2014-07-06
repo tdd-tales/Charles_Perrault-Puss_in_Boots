@@ -18,4 +18,14 @@ describe Tale::Son do
     expect(subject.inheritance).to eq(['treasure', 1])
     expect(inheritance).to eq([['table', 0], ['chair', 0]])
   end
+
+  it 'is comfortless if his inheritance is not valuable' do
+    expect(subject).not_to be_comfortless
+
+    subject.take_the_most_valuable_from_inheritance([['nothing', 0]])
+    expect(subject).to be_comfortless
+
+    subject.take_the_most_valuable_from_inheritance([['something', 3]])
+    expect(subject).not_to be_comfortless
+  end
 end
