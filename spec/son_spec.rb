@@ -1,31 +1,43 @@
 require_relative '../tale/son'
 
 describe Tale::Son do
-  subject { described_class.new('Leo') }
+  describe '#initialize' do
+    let(:son) { described_class.new('Lion') }
 
-  it 'has got a name' do
-    expect(subject.name).to eq('Leo')
+    it 'sets a name' do
+      expect(son.name).to eq('Lion')
+    end
+
+    it 'sets an empty inheritance' do
+      expect(son.inheritance).to be_an_instance_of(Tale::Inheritance)
+      expect(son.inheritance).to be_empty
+    end
   end
 
-  it 'has no own inheritance' do
-    expect(subject.inheritance).to be_empty
+  describe '#take_the_most_valuable_from_inheritance' do
+    let(:son) { described_class.new('Puma') }
+    let(:inheritance) { Tale::Inheritance.new(['sand', 0], ['treasure', 1]) }
+
+    it 'sets a new inheritance with the most valuable item' do
+      son.take_the_most_valuable_from_inheritance(inheritance)
+      expect(son.inheritance).to eq(Tale::Inheritance.new(['treasure', 1]))
+    end
   end
 
-  it 'takes the most valuable from an inheritance' do
-    inheritance = [['table', 0], ['chair', 0], ['treasure', 1]]
-    subject.take_the_most_valuable_from_inheritance(inheritance)
+  describe '#comfortless?' do
+    let(:son) { described_class.new('Tiger') }
+    let(:inheritance) { double }
 
-    expect(subject.inheritance).to eq(['treasure', 1])
-    expect(inheritance).to eq([['table', 0], ['chair', 0]])
-  end
+    before { allow(son).to receive(:inheritance).and_return(inheritance) }
 
-  it 'is comfortless if his inheritance is not valuable' do
-    expect(subject).not_to be_comfortless
+    it 'returns true when its inheritance is not valuable' do
+      allow(inheritance).to receive(:valuable?).and_return(false)
+      expect(son).to be_comfortless
+    end
 
-    subject.take_the_most_valuable_from_inheritance([['nothing', 0]])
-    expect(subject).to be_comfortless
-
-    subject.take_the_most_valuable_from_inheritance([['something', 3]])
-    expect(subject).not_to be_comfortless
+    it 'returns false when its inheritance is valuable' do
+      allow(inheritance).to receive(:valuable?).and_return(true)
+      expect(son).not_to be_comfortless
+    end
   end
 end
