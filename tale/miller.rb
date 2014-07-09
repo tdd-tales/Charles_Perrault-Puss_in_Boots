@@ -5,7 +5,7 @@ module Tale
     attr_reader :inheritance, :sons
 
     def initialize
-      @inheritance = [['mill', 2], ['donkey', 1], ['cat', 0]]
+      @inheritance = Inheritance.new(['mill', 2], ['donkey', 1], ['cat', 0])
       @sons = [Son.new('the eldest'), Son.new('the second'), Son.new('the youngest')]
     end
   end
